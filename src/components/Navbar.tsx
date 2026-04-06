@@ -20,8 +20,15 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50"
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
-        <a href="#home" className="text-2xl font-heading font-bold text-primary">
-          RK Digital
+        <a href="#home" className="flex items-center gap-2.5">
+          <img
+            src="/logo.jpeg"
+            alt="RK Digital Marketing Logo"
+            className="h-10 w-10 rounded-md object-cover shadow-sm bg-white"
+          />
+          <span className="text-xl font-heading font-bold text-primary leading-tight">
+            RK Digital Marketing
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -41,7 +48,7 @@ const Navbar = () => {
           href="#contact"
           className="hidden md:inline-flex items-center rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground hover:scale-105 transition-transform shadow-lg shadow-accent/25"
         >
-          Get a Quote
+          Get Started
         </a>
 
         <button
@@ -77,7 +84,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-accent-foreground"
               >
-                Get a Quote
+                Get Started
               </a>
             </div>
           </motion.div>

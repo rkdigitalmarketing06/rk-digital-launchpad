@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { TrendingUp, FileText, Users, ShieldCheck } from "lucide-react";
+import { Rocket, Users, Clock, Tags } from "lucide-react";
 
 const points = [
-  { icon: TrendingUp, title: "Data-Driven Approach", desc: "Every decision backed by analytics and real performance data." },
-  { icon: FileText, title: "Transparent Reporting", desc: "Clear, honest reports so you always know where your money goes." },
-  { icon: Users, title: "Expert Team", desc: "Seasoned marketers, designers, and videographers under one roof." },
-  { icon: ShieldCheck, title: "Proven Results", desc: "Consistent track record of delivering measurable growth." },
+  { icon: Rocket, title: "Result-Driven Strategies", desc: "We focus relentlessly on ROI and deliver measurable growth for your business." },
+  { icon: Users, title: "Creative & Experienced Team", desc: "Years of experience and a talented team dedicated to your success." },
+  { icon: Clock, title: "On-Time Delivery", desc: "Consistent, punctual delivery on every project — no excuses, just results." },
+  { icon: Tags, title: "Affordable Packages", desc: "Premium quality at competitive pricing, tailored to businesses of every size." },
 ];
 
 const stats = [
-  { value: "98%", label: "Client Retention" },
-  { value: "250+", label: "Projects Delivered" },
-  { value: "10+", label: "Years Experience" },
-  { value: "50M+", label: "Ad Spend Managed" },
+  { value: "200+", label: "Projects Completed" },
+  { value: "500+", label: "Happy Clients" },
+  { value: "5+", label: "Years Experience" },
+  { value: "50+", label: "Brands Served" },
 ];
 
 const About = () => (
@@ -25,12 +25,15 @@ const About = () => (
         transition={{ duration: 0.6 }}
       >
         <span className="inline-block rounded-full bg-primary/10 px-5 py-1.5 text-xs font-semibold text-primary tracking-wide uppercase mb-4">
-          Why Us
+          WHY CHOOSE US
         </span>
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-heading mb-8">
-          Why Brands Trust <span className="gradient-text">RK Digital</span>
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-heading mb-4">
+          Why Choose <span className="gradient-text">RK Digital?</span>
         </h2>
-        <div className="flex flex-col gap-6">
+        <p className="text-body-muted leading-relaxed mb-8">
+          We aren't just an agency; we are your growth partners. With years of experience and a relentless focus on ROI, we've helped countless businesses scale to new heights through innovative digital strategies.
+        </p>
+        <div className="flex flex-col gap-6 mb-8">
           {points.map((p) => (
             <div key={p.title} className="flex items-start gap-4">
               <div className="gradient-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0">
@@ -43,6 +46,12 @@ const About = () => (
             </div>
           ))}
         </div>
+        <a
+          href="#contact"
+          className="inline-flex items-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground hover:scale-105 transition-transform shadow-lg shadow-accent/30"
+        >
+          Work With Us →
+        </a>
       </motion.div>
 
       <motion.div

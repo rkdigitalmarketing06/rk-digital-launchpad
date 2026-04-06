@@ -1,13 +1,49 @@
 import { motion } from "framer-motion";
-import { Megaphone, Video, Palette, Camera, Search, BarChart3 } from "lucide-react";
+import { Megaphone, Film, Palette, Camera, Tag, Video, Sparkles } from "lucide-react";
 
 const services = [
-  { icon: Megaphone, title: "Social Media Marketing", desc: "Build a loyal audience and drive engagement across every major platform." },
-  { icon: Video, title: "Video Production", desc: "Cinematic storytelling that captivates and converts your target audience." },
-  { icon: Palette, title: "Creative Design", desc: "Stunning visuals and brand assets that make a lasting impression." },
-  { icon: Camera, title: "Professional Shooting", desc: "High-quality photography for products, events, and brand campaigns." },
-  { icon: Search, title: "SEO Optimization", desc: "Rank higher, get found faster, and dominate organic search results." },
-  { icon: BarChart3, title: "Performance Ads", desc: "Data-driven ad campaigns that maximize ROI across Google & Meta." },
+  {
+    icon: Megaphone,
+    title: "Social Media Management",
+    tags: ["Meta Ads", "Daily Posts", "Engagement"],
+    desc: "We grow your social presence with targeted ads, consistent content, and community engagement strategies that convert followers into customers.",
+  },
+  {
+    icon: Film,
+    title: "Photo & Video Editing",
+    tags: ["Reels", "Ad Videos", "Retouching"],
+    desc: "Dynamic reels, high-converting video ads, and flawless professional-grade images — crafted to capture attention and drive results for your brand.",
+  },
+  {
+    icon: Palette,
+    title: "Creative Designs",
+    tags: ["Social Media", "Ads", "Branding"],
+    desc: "Visual content, ad graphics, logos, and cohesive brand identities — designed to speak your unique voice and boost engagement across all platforms.",
+  },
+  {
+    icon: Camera,
+    title: "Professional Shooting",
+    tags: ["Product", "Business", "Promo Shoots"],
+    desc: "Studio-quality product images, corporate portraits, and creative promotional shoots that tell your brand story and drive sales.",
+  },
+  {
+    icon: Tag,
+    title: "Product Labelling Design",
+    tags: ["Packaging", "Branding", "Label Design"],
+    desc: "Eye-catching packaging and regulatory-compliant label designs for bottles, boxes, and pouches — built to differentiate on shelves and online.",
+  },
+  {
+    icon: Video,
+    title: "RK Digital Video Services",
+    tags: ["30 Shoots", "Pro Editing", "Scriptwriting"],
+    desc: "30 custom video shoots with professional editing and scriptwriting — tailored entirely to your business goals and target audience.",
+  },
+  {
+    icon: Sparkles,
+    title: "Ecommerce Product Shoot & AI Image Creation",
+    tags: ["Product Shoots", "AI Backgrounds", "Creative Ads"],
+    desc: "Professional ecommerce product photography combined with cutting-edge AI-generated visuals to make your products stand out and convert better.",
+  },
 ];
 
 const cardVariants = {
@@ -25,11 +61,12 @@ const Services = () => (
         className="text-center mb-16"
       >
         <span className="inline-block rounded-full bg-primary/10 px-5 py-1.5 text-xs font-semibold text-primary tracking-wide uppercase mb-4">
-          Our Expertise
+          What We Offer
         </span>
         <h2 className="text-3xl sm:text-4xl font-heading font-bold text-heading">
-          High-Impact Digital <span className="gradient-text">Services</span>
+          Our Premium <span className="gradient-text">Services</span>
         </h2>
+        <p className="text-body-muted mt-3">Everything you need to dominate your market digitally.</p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,10 +85,17 @@ const Services = () => (
               <s.icon className="text-primary-foreground" size={22} />
             </div>
             <h3 className="text-lg font-heading font-semibold text-heading mb-2">{s.title}</h3>
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {s.tags.map((tag) => (
+                <span key={tag} className="rounded-full border border-primary/30 px-3 py-0.5 text-xs font-medium text-primary">
+                  {tag}
+                </span>
+              ))}
+            </div>
             <p className="text-body-muted text-sm leading-relaxed mb-4">{s.desc}</p>
-            <span className="inline-flex items-center text-sm font-medium text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            <a href="#contact" className="inline-flex items-center text-sm font-medium text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 before:absolute before:inset-0">
               Learn More →
-            </span>
+            </a>
           </motion.div>
         ))}
       </div>

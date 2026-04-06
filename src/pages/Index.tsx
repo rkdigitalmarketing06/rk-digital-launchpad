@@ -6,9 +6,11 @@ import StatsBanner from "@/components/StatsBanner";
 import Results from "@/components/Results";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => (
   <>
+    <WhatsAppFloat />
     <Navbar />
     <Hero />
     <Services />

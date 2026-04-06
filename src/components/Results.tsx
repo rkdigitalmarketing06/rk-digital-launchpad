@@ -1,9 +1,30 @@
 import { motion } from "framer-motion";
 
 const projects = [
-  { tag: "E-commerce", title: "Fashion Brand Revamp", metric: "+300% Conversion Rate", color: "bg-primary/10 text-primary" },
-  { tag: "Real Estate", title: "Luxury Property Leads", metric: "5x Lead Generation", color: "bg-accent/10 text-accent" },
-  { tag: "SaaS", title: "Tech Startup Launch", metric: "#1 Ranking Achieved", color: "bg-primary/10 text-primary" },
+  {
+    tag: "E-COMMERCE BRAND",
+    metric: "300%",
+    title: "Traffic Growth",
+    desc: "Deployed a comprehensive SEO and content strategy, tripling organic traffic within 6 months and significantly boosting conversion rates.",
+    tagColor: "bg-accent/10 text-accent",
+    metricColor: "gradient-text",
+  },
+  {
+    tag: "LOCAL SERVICES",
+    metric: "5x",
+    title: "Lead Generation",
+    desc: "Executed a targeted Google Ads campaign for a local service business, multiplying qualified leads by 5x while reducing cost-per-lead by 40%.",
+    tagColor: "bg-primary/10 text-primary",
+    metricColor: "gradient-text",
+  },
+  {
+    tag: "SAAS STARTUP",
+    metric: "#1",
+    title: "Ranking Achieved",
+    desc: "Dominated niche SaaS keywords through strategic SEO, earning the #1 Google spot for 12+ high-intent keywords within 4 months.",
+    tagColor: "bg-border/40 text-heading",
+    metricColor: "gradient-text",
+  },
 ];
 
 const Results = () => (
@@ -21,6 +42,7 @@ const Results = () => (
         <h2 className="text-3xl sm:text-4xl font-heading font-bold text-heading">
           Real Results for <span className="gradient-text">Real Businesses</span>
         </h2>
+        <p className="text-body-muted mt-3">We let our numbers do the talking. Real growth for real businesses.</p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,20 +53,14 @@ const Results = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="group rounded-2xl border border-border/60 overflow-hidden bg-card hover:shadow-xl transition-all duration-300"
+            className="group rounded-2xl border border-border/60 overflow-hidden bg-card hover:shadow-xl transition-all duration-300 p-8"
           >
-            <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <span className="text-5xl font-heading font-bold gradient-text opacity-30 group-hover:opacity-60 transition-opacity">
-                0{i + 1}
-              </span>
-            </div>
-            <div className="p-6">
-              <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${p.color} mb-3`}>
-                {p.tag}
-              </span>
-              <h3 className="font-heading font-semibold text-heading text-lg mb-2">{p.title}</h3>
-              <p className="text-primary font-heading font-bold text-xl">{p.metric}</p>
-            </div>
+            <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${p.tagColor} mb-4`}>
+              {p.tag}
+            </span>
+            <p className="text-5xl font-heading font-extrabold gradient-text mb-2">{p.metric}</p>
+            <h3 className="font-heading font-semibold text-heading text-lg mb-3">{p.title}</h3>
+            <p className="text-body-muted text-sm leading-relaxed">{p.desc}</p>
           </motion.div>
         ))}
       </div>
